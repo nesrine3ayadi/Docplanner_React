@@ -1,13 +1,327 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body{
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+  color: #747474;
+}
+/***** Header ********/
+img#logo {
+  max-width: 270px;
+}
+.container{
+  max-width: 1015px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+  background: hsla(0,0%,100%,.98);
+  transition: box-shadow .25s ease 0s;
+}
+header .container {
+  display: flex;
+  align-items: center;
+
+}
+header nav{
+  text-align: right;
+  flex-grow: 1;
+}
+ul.main-menu>li {
+  display: inline-block;
+}
+ul.main-menu li a {
+  color: #ababab;
+  display: block;
+  text-decoration: none;
+  padding: 0 .6em;
+}
+.submenu {
+ display: none;
+ position: absolute;
+ background: white;
+ min-width: 220px;
+ box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+ z-index: 1;
+ /* margin-right: 156px; */
+ text-align: left;
+ right: 100px;
+ padding-left: 0px;
+ margin-top: 10px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+li.dropdown:hover>.submenu {
+  display: block; 
+}
+.submenu li{
+  display: block;
+  padding: 12px 16px;
+}
+.dropdown-content ul li a {
+  color: #747474;
+  line-height: 120%;
+  padding: 12px 16px!important;
+  text-decoration: none;
+  display: block;
+}
+/******** Section 1 **************/
+#section1{
+  display: flex;
+  flex-direction: column;
+  margin: 50px auto;
+} 
+#section1 img{
+  margin: auto;
+}
+section#section1 h1 {
+  font-size: 2.125rem;
+  color: #00b39b;
+  text-align: center;
+  font-weight: 500;
+}
+.paragrahes {
+  display: flex;
+  line-height: 1.75;
+  font-weight: 400;
+}
+.paragrahes p {
+  padding: 10px;
+}
+#section2 {
+  display: flex;
+}
+.left-card {
+  background: #00ccb1;
+}
+.right-card {
+  background: #3d83df;
+}
+.card-section2{
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  padding: 22px 40px 0;
+  margin: 10px;
+  height: 400px;
+  /* height: 100%; */
+  text-align: left;
+}
+.card-section2 h2{
+  font-size: 26px;
+  font-weight: 400;
+  margin-bottom: 25px;
+  margin-top: 5px;
+  color: #fff;
+}
+.card-section2 span{
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+  color: hsla(0,0%,100%,.7);
+}
+.card-section2 select{
+  width: 100%;
+  border-radius: 0;
+  width: 200px;
+  height: 40px;
+  border: 1px solid white;
+  padding: 0 15px;
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+.card-section2 img {width: 400px;height: 250px;position: absolute;}
+
+section#section3 {
+  display: flex;
+  margin: 40px auto;
+  text-align: left;
+}
+#section3 h3 {
+  color: #00b39b;
+  float: left;
+  width: 33%;
+  font-size: 26px;
+  margin: .25em 0 .35em;
+  padding-right: 1em;
+  font-weight: 500;
+}
+ul.brands li {
+  list-style: none;
+  font-size: 1rem;
+  display: inline-block;
+  padding: 5px 15px;
+}
+.parteners svg{
+  height: 20px;
+  width: auto;
+  max-width: 100%;
+  padding-left: 10px;
+  fill: hsla(0,0%,67%,.7);
+}
+ul.brands li a:hover svg path {
+  color: #00b39b;
+  fill:#00b39b;
+  
+}
+section#section4 {
+
+background-color: #e0f9f7;
+
+padding: 15px 0;
+
+overflow: hidden;
+}
+#section4 .container{
+  display: flex;
+  align-items: space-between;
+}
+section#section4 .left-side:before {
+  content: "";
+  position: absolute;
+  right: 100px;
+  top: 45%;
+  background: url(images/logo-section.png) no-repeat;
+  width: 456px;
+  height: 435px;
+  pointer-events: none;
+}
+.left-side {
+  position: relative;
+  width: 50%;
+}
+.card-section4  {
+  background: #fff;
+  border-radius: 5px;
+  height: 215px;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,.05);
+  width: 200px;
+  margin: auto;
+  margin: 5px;
+  text-align: center;
+  padding: 15px;
+  font-size: .8125em;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  float: left;
+}
+
+
+.card-section4.margin-top {
+   margin-top: 25px; 
+}
+.card6 {
+  width: 33.33%;
+  float: left;
+}
+.right-side {
+  grid-template-columns: auto auto;
+  display: grid;
+  width: 50%;
+}
+section#section5 h5 {
+  font-size: 35px;
+  color: #00ccb1;
+  font-weight: 500;
+}
+
+section#section5 * {
+  max-width: 460px;
+  margin: 40px auto;
+  font-size: .875em;
+  text-align: center;
+}
+section#section5 p {
+  line-height: 24px;
+}
+.card-title {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px;
+}
+.card6 img {
+  width: 100%;
+}
+.card6 {
+  width: 31.33%;
+  float: left;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.03);
+  border-radius: 6px;
+  overflow: hidden;
+  max-width: 311px;
+  z-index: 2;
+  position: relative;
+  display: block;
+  color: #747474;
+  margin: 1%;
+}
+
+.card6 button{
+  color: #fff;
+  background: #3d83df;
+  padding: 10px 15px;
+  height: 30px;
+  line-height: 0;
+  border: 1px solid;
+  border-radius: 5px;
+}
+.card6:hover {
+  box-shadow: 0 20px 50px 0 rgba(0,0,0,.13);
+}
+.right-side h5{
+  
+  font-size: 24px;   
+  color: #00b39b;  
+  margin: .5em 0;   
+  font-weight: 500;
+}
+.left-side h4 {
+  line-height: 40px;
+  font-size: 34px;
+  color: #00b39b;
+  font-weight: 500;
+}
+.right-card img.computer_figure {
+  margin-left: 200px;
+}
+section#section4 p {
+  font-size: 13px;
+  line-height: 15px;
+  margin: 0;
+
+}
+footer {
+  width: 100%;
+  float: left;
+  border-top: 1px solid #eef2f2;
+  font-size: 12px;
+  color: #ababab;
+  text-align: center;
+  padding: 16px 0;
+
+}
+footer a {
+  color: #3d83df;
+}
+@media screen and (max-width:480px){
+  .card6 {width:100%; }
+  .left-side{width:100%; }
+  .right-side{width:100%; grid-template-columns: auto; }
+  #section4 .container{flex-direction: column;}
+  section#section4 .left-side:before{z-index: -1;}
+  section#section3{flex-direction: column;}
+  section#section3 h3{width: 100%;}
+  #section2{flex-direction: column;}
+  .right-card img.computer_figure{margin-left: 0;}
+  .paragrahes{flex-direction: column;}
+  header .container{flex-direction: column;}
+  header {        padding: 15px 0px;}
+  .card-section2 img{
+      position: relative;
+      margin: 15px;
+  }
 }
